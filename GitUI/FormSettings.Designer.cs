@@ -289,9 +289,8 @@ namespace GitUI
             this.tpHotkeys = new System.Windows.Forms.TabPage();
             this.controlHotkeys = new GitUI.Hotkey.ControlHotkeys();
             this.tpShellExt = new System.Windows.Forms.TabPage();
-            this.lblMenuEntries = new System.Windows.Forms.Label();
+            this.lblCascadedMenuEntries = new System.Windows.Forms.Label();
             this.chlMenuEntries = new System.Windows.Forms.CheckedListBox();
-            this.chkCascadedContextMenu = new System.Windows.Forms.CheckBox();
             this.tpIssueTracking = new System.Windows.Forms.TabPage();
             this.IncludeBranchNameInCommitMessage = new System.Windows.Forms.CheckBox();
             this.groupBox17 = new System.Windows.Forms.GroupBox();
@@ -407,8 +406,7 @@ namespace GitUI
             // 
             this.argumentsTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.helpProvider1.SetHelpString(this.argumentsTextBox, resources.GetString("argumentsTextBox.HelpString"));
-            this.argumentsTextBox.Location = new System.Drawing.Point(96, 104);
-            this.argumentsTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.argumentsTextBox.Location = new System.Drawing.Point(84, 83);
             this.argumentsTextBox.Name = "argumentsTextBox";
             this.helpProvider1.SetShowHelp(this.argumentsTextBox, true);
             this.argumentsTextBox.Size = new System.Drawing.Size(688, 179);
@@ -3581,11 +3579,9 @@ namespace GitUI
             // 
             // tpShellExt
             // 
-            this.tpShellExt.Controls.Add(this.lblMenuEntries);
+            this.tpShellExt.Controls.Add(this.lblCascadedMenuEntries);
             this.tpShellExt.Controls.Add(this.chlMenuEntries);
-            this.tpShellExt.Controls.Add(this.chkCascadedContextMenu);
-            this.tpShellExt.Location = new System.Drawing.Point(4, 29);
-            this.tpShellExt.Margin = new System.Windows.Forms.Padding(4);
+            this.tpShellExt.Location = new System.Drawing.Point(4, 25);
             this.tpShellExt.Name = "tpShellExt";
             this.tpShellExt.Padding = new System.Windows.Forms.Padding(4);
             this.tpShellExt.Size = new System.Drawing.Size(924, 637);
@@ -3593,15 +3589,14 @@ namespace GitUI
             this.tpShellExt.Text = "Shell extension";
             this.tpShellExt.UseVisualStyleBackColor = true;
             // 
-            // lblMenuEntries
+            // lblCascadedMenuEntries
             // 
-            this.lblMenuEntries.AutoSize = true;
-            this.lblMenuEntries.Location = new System.Drawing.Point(10, 62);
-            this.lblMenuEntries.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblMenuEntries.Name = "lblMenuEntries";
-            this.lblMenuEntries.Size = new System.Drawing.Size(198, 20);
-            this.lblMenuEntries.TabIndex = 2;
-            this.lblMenuEntries.Text = "Visible context menu entries:";
+            this.lblCascadedMenuEntries.AutoSize = true;
+            this.lblCascadedMenuEntries.Location = new System.Drawing.Point(8, 15);
+            this.lblCascadedMenuEntries.Name = "lblCascadedMenuEntries";
+            this.lblCascadedMenuEntries.Size = new System.Drawing.Size(174, 16);
+            this.lblCascadedMenuEntries.TabIndex = 2;
+            this.lblCascadedMenuEntries.Text = "Cascaded context menu";
             // 
             // chlMenuEntries
             // 
@@ -3622,174 +3617,10 @@ namespace GitUI
             "Push",
             "Settings",
             "View diff"});
-            this.chlMenuEntries.Location = new System.Drawing.Point(12, 85);
-            this.chlMenuEntries.Margin = new System.Windows.Forms.Padding(4);
+            this.chlMenuEntries.Location = new System.Drawing.Point(10, 38);
             this.chlMenuEntries.Name = "chlMenuEntries";
             this.chlMenuEntries.Size = new System.Drawing.Size(299, 312);
             this.chlMenuEntries.TabIndex = 1;
-            // 
-            // chkCascadedContextMenu
-            // 
-            this.chkCascadedContextMenu.AutoSize = true;
-            this.chkCascadedContextMenu.Location = new System.Drawing.Point(10, 19);
-            this.chkCascadedContextMenu.Margin = new System.Windows.Forms.Padding(4);
-            this.chkCascadedContextMenu.Name = "chkCascadedContextMenu";
-            this.chkCascadedContextMenu.Size = new System.Drawing.Size(189, 24);
-            this.chkCascadedContextMenu.TabIndex = 0;
-            this.chkCascadedContextMenu.Text = "Cascaded context menu";
-            this.chkCascadedContextMenu.UseVisualStyleBackColor = true;
-            // 
-            // tpIssueTracking
-            // 
-            this.tpIssueTracking.Controls.Add(this.IncludeBranchNameInCommitMessage);
-            this.tpIssueTracking.Controls.Add(this.groupBox17);
-            this.tpIssueTracking.Controls.Add(this.groupBox16);
-            this.tpIssueTracking.Location = new System.Drawing.Point(4, 29);
-            this.tpIssueTracking.Name = "tpIssueTracking";
-            this.tpIssueTracking.Padding = new System.Windows.Forms.Padding(3);
-            this.tpIssueTracking.Size = new System.Drawing.Size(924, 637);
-            this.tpIssueTracking.TabIndex = 12;
-            this.tpIssueTracking.Text = "Issue Tracking System";
-            this.tpIssueTracking.UseVisualStyleBackColor = true;
-            // 
-            // IncludeBranchNameInCommitMessage
-            // 
-            this.IncludeBranchNameInCommitMessage.AutoSize = true;
-            this.IncludeBranchNameInCommitMessage.Checked = true;
-            this.IncludeBranchNameInCommitMessage.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.IncludeBranchNameInCommitMessage.Location = new System.Drawing.Point(44, 44);
-            this.IncludeBranchNameInCommitMessage.Name = "IncludeBranchNameInCommitMessage";
-            this.IncludeBranchNameInCommitMessage.Size = new System.Drawing.Size(302, 24);
-            this.IncludeBranchNameInCommitMessage.TabIndex = 8;
-            this.IncludeBranchNameInCommitMessage.Text = "Include branch name in commit message";
-            this.IncludeBranchNameInCommitMessage.UseVisualStyleBackColor = true;
-            // 
-            // groupBox17
-            // 
-            this.groupBox17.Controls.Add(this.ShowStatusInProgress);
-            this.groupBox17.Controls.Add(this.ShowStatusResolved);
-            this.groupBox17.Controls.Add(this.ShowStatusOpen);
-            this.groupBox17.Location = new System.Drawing.Point(21, 331);
-            this.groupBox17.Name = "groupBox17";
-            this.groupBox17.Size = new System.Drawing.Size(524, 191);
-            this.groupBox17.TabIndex = 9;
-            this.groupBox17.TabStop = false;
-            this.groupBox17.Text = "Issue Statuses to show";
-            // 
-            // ShowStatusInProgress
-            // 
-            this.ShowStatusInProgress.AutoSize = true;
-            this.ShowStatusInProgress.Checked = true;
-            this.ShowStatusInProgress.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ShowStatusInProgress.Location = new System.Drawing.Point(23, 95);
-            this.ShowStatusInProgress.Name = "ShowStatusInProgress";
-            this.ShowStatusInProgress.Size = new System.Drawing.Size(103, 24);
-            this.ShowStatusInProgress.TabIndex = 7;
-            this.ShowStatusInProgress.Tag = "In Progress";
-            this.ShowStatusInProgress.Text = "In Progress";
-            this.ShowStatusInProgress.UseVisualStyleBackColor = true;
-            // 
-            // ShowStatusResolved
-            // 
-            this.ShowStatusResolved.AutoSize = true;
-            this.ShowStatusResolved.Location = new System.Drawing.Point(23, 145);
-            this.ShowStatusResolved.Name = "ShowStatusResolved";
-            this.ShowStatusResolved.Size = new System.Drawing.Size(91, 24);
-            this.ShowStatusResolved.TabIndex = 8;
-            this.ShowStatusResolved.Tag = "Resolved";
-            this.ShowStatusResolved.Text = "Resolved";
-            this.ShowStatusResolved.UseVisualStyleBackColor = true;
-            // 
-            // ShowStatusOpen
-            // 
-            this.ShowStatusOpen.AutoSize = true;
-            this.ShowStatusOpen.Location = new System.Drawing.Point(23, 48);
-            this.ShowStatusOpen.Name = "ShowStatusOpen";
-            this.ShowStatusOpen.Size = new System.Drawing.Size(67, 24);
-            this.ShowStatusOpen.TabIndex = 6;
-            this.ShowStatusOpen.Tag = "Open";
-            this.ShowStatusOpen.Text = "Open";
-            this.ShowStatusOpen.UseVisualStyleBackColor = true;
-            // 
-            // groupBox16
-            // 
-            this.groupBox16.Controls.Add(this.LoadMyIssues);
-            this.groupBox16.Controls.Add(this.IssueServicePassword);
-            this.groupBox16.Controls.Add(this.IssueServiceUserName);
-            this.groupBox16.Controls.Add(this.IssueServiceUrl);
-            this.groupBox16.Controls.Add(this.lblIssueTrackUrl);
-            this.groupBox16.Controls.Add(this.label35);
-            this.groupBox16.Controls.Add(this.label34);
-            this.groupBox16.Location = new System.Drawing.Point(21, 95);
-            this.groupBox16.Name = "groupBox16";
-            this.groupBox16.Size = new System.Drawing.Size(524, 221);
-            this.groupBox16.TabIndex = 3;
-            this.groupBox16.TabStop = false;
-            this.groupBox16.Text = "Issue Tracking Connection Information";
-            // 
-            // LoadMyIssues
-            // 
-            this.LoadMyIssues.AutoSize = true;
-            this.LoadMyIssues.Checked = true;
-            this.LoadMyIssues.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.LoadMyIssues.Location = new System.Drawing.Point(23, 36);
-            this.LoadMyIssues.Name = "LoadMyIssues";
-            this.LoadMyIssues.Size = new System.Drawing.Size(130, 24);
-            this.LoadMyIssues.TabIndex = 9;
-            this.LoadMyIssues.Text = "Load My Issues";
-            this.LoadMyIssues.UseVisualStyleBackColor = true;
-            // 
-            // IssueServicePassword
-            // 
-            this.IssueServicePassword.Location = new System.Drawing.Point(205, 171);
-            this.IssueServicePassword.Name = "IssueServicePassword";
-            this.IssueServicePassword.Size = new System.Drawing.Size(300, 27);
-            this.IssueServicePassword.TabIndex = 5;
-            this.IssueServicePassword.Text = ")3;a~a6}}FI";
-            this.IssueServicePassword.UseSystemPasswordChar = true;
-            // 
-            // IssueServiceUserName
-            // 
-            this.IssueServiceUserName.Location = new System.Drawing.Point(205, 129);
-            this.IssueServiceUserName.Name = "IssueServiceUserName";
-            this.IssueServiceUserName.Size = new System.Drawing.Size(300, 27);
-            this.IssueServiceUserName.TabIndex = 4;
-            this.IssueServiceUserName.Text = "JiraReader";
-            // 
-            // IssueServiceUrl
-            // 
-            this.IssueServiceUrl.Location = new System.Drawing.Point(205, 84);
-            this.IssueServiceUrl.Name = "IssueServiceUrl";
-            this.IssueServiceUrl.Size = new System.Drawing.Size(300, 27);
-            this.IssueServiceUrl.TabIndex = 3;
-            this.IssueServiceUrl.Text = "https://jira.cfcausa.org/rpc/soap/jirasoapservice-v2?wsdl";
-            // 
-            // lblIssueTrackUrl
-            // 
-            this.lblIssueTrackUrl.AutoSize = true;
-            this.lblIssueTrackUrl.Location = new System.Drawing.Point(19, 84);
-            this.lblIssueTrackUrl.Name = "lblIssueTrackUrl";
-            this.lblIssueTrackUrl.Size = new System.Drawing.Size(79, 20);
-            this.lblIssueTrackUrl.TabIndex = 0;
-            this.lblIssueTrackUrl.Text = "Service Url";
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(19, 174);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(122, 20);
-            this.label35.TabIndex = 2;
-            this.label35.Text = "Service Password";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(19, 129);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(126, 20);
-            this.label34.TabIndex = 1;
-            this.label34.Text = "Service Username";
             // 
             // Ok
             // 
@@ -4010,7 +3841,7 @@ namespace GitUI
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox pictureBox2;
-		private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label23;
         private System.Windows.Forms.TextBox SmtpServer;
         private System.Windows.Forms.TabPage tpColors;
         private System.Windows.Forms.GroupBox groupBox4;
@@ -4152,9 +3983,8 @@ namespace GitUI
         private CheckBox ShowAuthorGravatar;
         private CheckBox chkPlaySpecialStartupSound;
         private TabPage tpShellExt;
-        private Label lblMenuEntries;
+        private Label lblCascadedMenuEntries;
         private CheckedListBox chlMenuEntries;
-        private CheckBox chkCascadedContextMenu;
         private CheckBox chkEnableAutoScale;
         private CheckBox chkWriteCommitMessageInCommitWindow;
         private GroupBox groupBox15;

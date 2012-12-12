@@ -56,9 +56,10 @@
             // 
             this.okButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.okButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.okButton.Location = new System.Drawing.Point(470, 275);
+            this.okButton.Location = new System.Drawing.Point(587, 344);
+            this.okButton.Margin = new System.Windows.Forms.Padding(4);
             this.okButton.Name = "okButton";
-            this.okButton.Size = new System.Drawing.Size(75, 25);
+            this.okButton.Size = new System.Drawing.Size(94, 31);
             this.okButton.TabIndex = 24;
             this.okButton.Text = "&OK";
             this.okButton.Click += new System.EventHandler(this.okButton_Click);
@@ -78,6 +79,7 @@
             this.tableLayoutPanel.Controls.Add(this.tableLayoutPanel1, 1, 4);
             this.tableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel.Name = "tableLayoutPanel";
             this.tableLayoutPanel.RowCount = 6;
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.39607F));
@@ -87,17 +89,18 @@
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.930693F));
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.52388F));
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.304775F));
-            this.tableLayoutPanel.Size = new System.Drawing.Size(548, 303);
+            this.tableLayoutPanel.Size = new System.Drawing.Size(685, 379);
             this.tableLayoutPanel.TabIndex = 0;
             // 
             // logoPictureBox
             // 
             this.logoPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.logoPictureBox.Image = global::GitUI.Properties.Resources.git_extensions_logo_final_128;
-            this.logoPictureBox.Location = new System.Drawing.Point(3, 3);
+            this.logoPictureBox.Location = new System.Drawing.Point(4, 4);
+            this.logoPictureBox.Margin = new System.Windows.Forms.Padding(4);
             this.logoPictureBox.Name = "logoPictureBox";
             this.tableLayoutPanel.SetRowSpan(this.logoPictureBox, 7);
-            this.logoPictureBox.Size = new System.Drawing.Size(158, 297);
+            this.logoPictureBox.Size = new System.Drawing.Size(197, 371);
             this.logoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.logoPictureBox.TabIndex = 12;
             this.logoPictureBox.TabStop = false;
@@ -105,11 +108,11 @@
             // _NO_TRANSLATE_labelCopyright
             // 
             this._NO_TRANSLATE_labelCopyright.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._NO_TRANSLATE_labelCopyright.Location = new System.Drawing.Point(164, 65);
+            this._NO_TRANSLATE_labelCopyright.Location = new System.Drawing.Point(205, 82);
             this._NO_TRANSLATE_labelCopyright.Margin = new System.Windows.Forms.Padding(0);
-            this._NO_TRANSLATE_labelCopyright.MaximumSize = new System.Drawing.Size(0, 17);
+            this._NO_TRANSLATE_labelCopyright.MaximumSize = new System.Drawing.Size(0, 21);
             this._NO_TRANSLATE_labelCopyright.Name = "_NO_TRANSLATE_labelCopyright";
-            this._NO_TRANSLATE_labelCopyright.Size = new System.Drawing.Size(384, 17);
+            this._NO_TRANSLATE_labelCopyright.Size = new System.Drawing.Size(480, 21);
             this._NO_TRANSLATE_labelCopyright.TabIndex = 21;
             this._NO_TRANSLATE_labelCopyright.Text = "Henk Westhuis (henk_westhuis@hotmail.com)";
             this._NO_TRANSLATE_labelCopyright.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -117,11 +120,11 @@
             // _NO_TRANSLATE_labelVersionInfo
             // 
             this._NO_TRANSLATE_labelVersionInfo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._NO_TRANSLATE_labelVersionInfo.Location = new System.Drawing.Point(164, 43);
+            this._NO_TRANSLATE_labelVersionInfo.Location = new System.Drawing.Point(205, 54);
             this._NO_TRANSLATE_labelVersionInfo.Margin = new System.Windows.Forms.Padding(0);
-            this._NO_TRANSLATE_labelVersionInfo.MaximumSize = new System.Drawing.Size(0, 17);
+            this._NO_TRANSLATE_labelVersionInfo.MaximumSize = new System.Drawing.Size(0, 21);
             this._NO_TRANSLATE_labelVersionInfo.Name = "_NO_TRANSLATE_labelVersionInfo";
-            this._NO_TRANSLATE_labelVersionInfo.Size = new System.Drawing.Size(384, 17);
+            this._NO_TRANSLATE_labelVersionInfo.Size = new System.Drawing.Size(480, 21);
             this._NO_TRANSLATE_labelVersionInfo.TabIndex = 0;
             this._NO_TRANSLATE_labelVersionInfo.Text = "Version ";
             this._NO_TRANSLATE_labelVersionInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -133,9 +136,10 @@
             this.pictureDonate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureDonate.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureDonate.Image = global::GitUI.Properties.Resources.Donate;
-            this.pictureDonate.Location = new System.Drawing.Point(447, 3);
+            this.pictureDonate.Location = new System.Drawing.Point(559, 4);
+            this.pictureDonate.Margin = new System.Windows.Forms.Padding(4);
             this.pictureDonate.Name = "pictureDonate";
-            this.pictureDonate.Size = new System.Drawing.Size(98, 37);
+            this.pictureDonate.Size = new System.Drawing.Size(122, 46);
             this.pictureDonate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureDonate.TabIndex = 25;
             this.pictureDonate.TabStop = false;
@@ -144,25 +148,25 @@
             // _NO_TRANSLATE_labelProductName
             // 
             this._NO_TRANSLATE_labelProductName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._NO_TRANSLATE_labelProductName.Location = new System.Drawing.Point(164, 87);
+            this._NO_TRANSLATE_labelProductName.Location = new System.Drawing.Point(205, 110);
             this._NO_TRANSLATE_labelProductName.Margin = new System.Windows.Forms.Padding(0);
-            this._NO_TRANSLATE_labelProductName.MaximumSize = new System.Drawing.Size(0, 17);
+            this._NO_TRANSLATE_labelProductName.MaximumSize = new System.Drawing.Size(0, 21);
             this._NO_TRANSLATE_labelProductName.Name = "_NO_TRANSLATE_labelProductName";
-            this._NO_TRANSLATE_labelProductName.Size = new System.Drawing.Size(384, 17);
+            this._NO_TRANSLATE_labelProductName.Size = new System.Drawing.Size(480, 21);
             this._NO_TRANSLATE_labelProductName.TabIndex = 19;
-            this._NO_TRANSLATE_labelProductName.Text = "Git Extensions";
+            this._NO_TRANSLATE_labelProductName.Text = "Git Extensions CFCA Edition";
             this._NO_TRANSLATE_labelProductName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // textBoxDescription
             // 
             this.textBoxDescription.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxDescription.Location = new System.Drawing.Point(170, 134);
-            this.textBoxDescription.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
+            this.textBoxDescription.Location = new System.Drawing.Point(213, 168);
+            this.textBoxDescription.Margin = new System.Windows.Forms.Padding(8, 4, 4, 4);
             this.textBoxDescription.Multiline = true;
             this.textBoxDescription.Name = "textBoxDescription";
             this.textBoxDescription.ReadOnly = true;
             this.textBoxDescription.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxDescription.Size = new System.Drawing.Size(375, 135);
+            this.textBoxDescription.Size = new System.Drawing.Size(468, 168);
             this.textBoxDescription.TabIndex = 23;
             this.textBoxDescription.TabStop = false;
             this.textBoxDescription.Text = resources.GetString("textBoxDescription.Text");
@@ -170,17 +174,17 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 75F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 94F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.thanksTo, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this._NO_TRANSLATE_thanksToTicker, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(164, 110);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(205, 138);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(384, 21);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(480, 26);
             this.tableLayoutPanel1.TabIndex = 26;
             // 
             // thanksTo
@@ -189,7 +193,7 @@
             this.thanksTo.Location = new System.Drawing.Point(0, 0);
             this.thanksTo.Margin = new System.Windows.Forms.Padding(0);
             this.thanksTo.Name = "thanksTo";
-            this.thanksTo.Size = new System.Drawing.Size(62, 15);
+            this.thanksTo.Size = new System.Drawing.Size(75, 20);
             this.thanksTo.TabIndex = 27;
             this.thanksTo.Text = "Thanks to:";
             this.thanksTo.Click += new System.EventHandler(this._NO_TRANSLATE_thanksToTicker_Click);
@@ -199,20 +203,22 @@
             this._NO_TRANSLATE_thanksToTicker.AutoEllipsis = true;
             this._NO_TRANSLATE_thanksToTicker.Cursor = System.Windows.Forms.Cursors.Hand;
             this._NO_TRANSLATE_thanksToTicker.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._NO_TRANSLATE_thanksToTicker.Location = new System.Drawing.Point(78, 0);
+            this._NO_TRANSLATE_thanksToTicker.Location = new System.Drawing.Point(98, 0);
+            this._NO_TRANSLATE_thanksToTicker.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this._NO_TRANSLATE_thanksToTicker.Name = "_NO_TRANSLATE_thanksToTicker";
-            this._NO_TRANSLATE_thanksToTicker.Size = new System.Drawing.Size(303, 21);
+            this._NO_TRANSLATE_thanksToTicker.Size = new System.Drawing.Size(378, 26);
             this._NO_TRANSLATE_thanksToTicker.TabIndex = 28;
             this._NO_TRANSLATE_thanksToTicker.Click += new System.EventHandler(this._NO_TRANSLATE_thanksToTicker_Click);
             // 
             // AboutBox
             // 
             this.AcceptButton = this.okButton;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(548, 303);
+            this.ClientSize = new System.Drawing.Size(685, 379);
             this.Controls.Add(this.tableLayoutPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AboutBox";

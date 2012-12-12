@@ -6,11 +6,11 @@ rem
 set version=2.43
 
 set msiversion=%version:.=%
-set normal=GitExtensions%msiversion%Setup.msi
-set complete=GitExtensions%msiversion%SetupComplete.msi
+set normal=CFCAGitExtensions%msiversion%Setup.msi
+set complete=CFCAGitExtensions%msiversion%SetupComplete.msi
 
 set msbuild="%windir%\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe"
-set output=bin\Release\GitExtensions.msi
+set output=bin\Release\CFCAGitExtensions.msi
 set project=Setup.wixproj
 
 set build=%msbuild% %project% /t:Rebuild /p:Version=%Version% /p:Configuration=Release /nologo /v:m

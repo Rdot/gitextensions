@@ -15,6 +15,7 @@ using GitUI.Script;
 using PatchApply;
 using ResourceManager.Translation;
 using Timer = System.Windows.Forms.Timer;
+using GitUI.IssueTracker;
 
 namespace GitUI
 {
@@ -364,6 +365,31 @@ namespace GitUI
         public void ShowDialogWhenChanges()
         {
             ShowDialogWhenChanges(null);
+        }
+
+        private void LoadIssues()
+        {
+            this.Message.Text = "";
+            if (Settings.IncludeBranchNameInCommitMessage)
+            {
+                this.Message.Text = Module.GetSelectedBranch() + ":";
+            }
+
+            if (Settings.LoadMyIssues)
+            {
+                toolStripComboBoxIssues.Text = "loading issues...";
+                List<string> listIssueKeys = new List<string>();
+                Task loadIssuesTask = Task.Factory.StartNew(() =>
+                {
+                    IIssueTracker issueTracker = new JiraIssueTracker();
+                    listIssueKeys = issueTracker.GetUserItems(Environment.UserName);
+                }).ContinueWith((antecedent) =>
+                    {
+                        toolStripComboBoxIssues.Text = "";
+                        listIssueKeys.ForEach(issue => this.toolStripComboBoxIssues.Items.Add(issue));
+                    }, TaskScheduler.FromCurrentSynchronizationContext()
+                );
+            }
         }
 
         private void ComputeUnstagedFiles(Action<IList<GitItemStatus>> onComputed, bool async)
@@ -1306,6 +1332,8 @@ namespace GitUI
 
                     _syncContext.Post(state1 => Text = text, null);
                 });
+
+            this.LoadIssues();
         }
 
         private void SetCommitMessageFromTextBox(string commitMessageText)
@@ -2084,6 +2112,11 @@ namespace GitUI
         {
             if (StageInSuperproject.Visible)
                 Settings.StageInSuperprojectAfterCommit = StageInSuperproject.Checked;
+        }
+
+        private void toolStripComboBoxIssues_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.Message.Text = this.toolStripComboBoxIssues.Text + ":";
         }
     }
 

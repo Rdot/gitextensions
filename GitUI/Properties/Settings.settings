@@ -20,5 +20,8 @@
     <Setting Name="Dashboard_CommonSplitContainer_SplitterDistance" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
+    <Setting Name="GitUI_JiraService_JiraSoapServiceService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://jira.cfcausa.org/rpc/soap/jirasoapservice-v2</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

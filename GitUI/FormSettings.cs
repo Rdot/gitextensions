@@ -402,6 +402,15 @@ namespace GitUI
                 GitCommandHelpers.SetEnvironmentVariable();
                 homeIsSetToLabel.Text = string.Concat(_homeIsSetToString.Text, " ", GitCommandHelpers.GetHomeDir());
 
+                IssueServicePassword.Text = Settings.IssueServicePassword;
+                IssueServiceUrl.Text = Settings.IssueServiceUrl;
+                IssueServiceUserName.Text = Settings.IssueServiceUserName;
+                LoadMyIssues.Checked = Settings.LoadMyIssues;
+                IncludeBranchNameInCommitMessage.Checked = Settings.IncludeBranchNameInCommitMessage;
+                ShowStatusResolved.Checked = Settings.ShowStatusResolved;
+                ShowStatusInProgress.Checked = Settings.ShowStatusInProgress;
+                ShowStatusOpen.Checked = Settings.ShowStatusOpen;
+
                 chkEnableAutoScale.Checked = Settings.EnableAutoScale;
 
                 scriptEvent.DataSource = Enum.GetValues(typeof(ScriptEvent));
@@ -594,6 +603,9 @@ namespace GitUI
                     Other.Checked = true;
                 }
 
+                //this.IssueConnectionUrl = Settings.IssueConnectionUrl;
+                //this.
+
                 EnableSshOptions();
                 LoadScripts();
             }
@@ -621,6 +633,18 @@ namespace GitUI
                 FormFixHome.CheckHomePath();
 
             GitCommandHelpers.SetEnvironmentVariable(true);
+
+            //
+            // Issue Tracking System tab
+            //
+            Settings.IssueServiceUrl = IssueServiceUrl.Text;
+            Settings.IssueServiceUserName = IssueServiceUserName.Text;
+            Settings.IssueServicePassword = IssueServicePassword.Text;
+            Settings.IncludeBranchNameInCommitMessage = IncludeBranchNameInCommitMessage.Checked;
+            Settings.LoadMyIssues = LoadMyIssues.Checked;
+            Settings.ShowStatusInProgress = ShowStatusInProgress.Checked;
+            Settings.ShowStatusOpen = ShowStatusOpen.Checked;
+            Settings.ShowStatusResolved = ShowStatusResolved.Checked;
 
             Settings.EnableAutoScale = chkEnableAutoScale.Checked;
 
@@ -2499,6 +2523,5 @@ namespace GitUI
 
             CheckSettings();
         }
-
     }
 }

@@ -46,7 +46,7 @@
             this._NO_TRANSLATE_Caption.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this._NO_TRANSLATE_Caption.Location = new System.Drawing.Point(3, 2);
             this._NO_TRANSLATE_Caption.Name = "_NO_TRANSLATE_Caption";
-            this._NO_TRANSLATE_Caption.Size = new System.Drawing.Size(44, 15);
+            this._NO_TRANSLATE_Caption.Size = new System.Drawing.Size(56, 20);
             this._NO_TRANSLATE_Caption.TabIndex = 8;
             this._NO_TRANSLATE_Caption.Text = "##Title";
             // 

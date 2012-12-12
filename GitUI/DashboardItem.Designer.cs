@@ -57,9 +57,9 @@
             this._NO_TRANSLATE_BranchName.AutoSize = true;
             this._NO_TRANSLATE_BranchName.Cursor = System.Windows.Forms.Cursors.Hand;
             this._NO_TRANSLATE_BranchName.Dock = System.Windows.Forms.DockStyle.Left;
-            this._NO_TRANSLATE_BranchName.Location = new System.Drawing.Point(52, 0);
+            this._NO_TRANSLATE_BranchName.Location = new System.Drawing.Point(68, 0);
             this._NO_TRANSLATE_BranchName.Name = "_NO_TRANSLATE_BranchName";
-            this._NO_TRANSLATE_BranchName.Size = new System.Drawing.Size(58, 15);
+            this._NO_TRANSLATE_BranchName.Size = new System.Drawing.Size(72, 20);
             this._NO_TRANSLATE_BranchName.TabIndex = 4;
             this._NO_TRANSLATE_BranchName.Text = "##branch";
             this._NO_TRANSLATE_BranchName.Click += new System.EventHandler(this.Title_Click);
@@ -74,7 +74,7 @@
             this._NO_TRANSLATE_Title.Dock = System.Windows.Forms.DockStyle.Left;
             this._NO_TRANSLATE_Title.Location = new System.Drawing.Point(0, 0);
             this._NO_TRANSLATE_Title.Name = "_NO_TRANSLATE_Title";
-            this._NO_TRANSLATE_Title.Size = new System.Drawing.Size(52, 15);
+            this._NO_TRANSLATE_Title.Size = new System.Drawing.Size(68, 20);
             this._NO_TRANSLATE_Title.TabIndex = 1;
             this._NO_TRANSLATE_Title.TabStop = true;
             this._NO_TRANSLATE_Title.Text = "##label1";
@@ -100,7 +100,7 @@
             this._NO_TRANSLATE_Description.Cursor = System.Windows.Forms.Cursors.Hand;
             this._NO_TRANSLATE_Description.Location = new System.Drawing.Point(29, 25);
             this._NO_TRANSLATE_Description.Name = "_NO_TRANSLATE_Description";
-            this._NO_TRANSLATE_Description.Size = new System.Drawing.Size(40, 15);
+            this._NO_TRANSLATE_Description.Size = new System.Drawing.Size(52, 20);
             this._NO_TRANSLATE_Description.TabIndex = 3;
             this._NO_TRANSLATE_Description.Text = "##text";
             this._NO_TRANSLATE_Description.MouseEnter += new System.EventHandler(this.DashboardItem_MouseEnter);
@@ -118,7 +118,7 @@
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "DashboardItem";
-            this.Size = new System.Drawing.Size(281, 40);
+            this.Size = new System.Drawing.Size(281, 45);
             this.SizeChanged += new System.EventHandler(this.DashboardItem_SizeChanged);
             this.MouseEnter += new System.EventHandler(this.DashboardItem_MouseEnter);
             this.MouseLeave += new System.EventHandler(this.DashboardItem_MouseLeave);

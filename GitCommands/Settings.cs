@@ -39,6 +39,64 @@ namespace GitCommands
             ApplicationDataPath = Application.UserAppDataPath.Replace(Application.ProductVersion, string.Empty);
         }
 
+
+        private static bool? _includebranchnameincommitmessage;
+        public static bool IncludeBranchNameInCommitMessage
+        {
+            get { return SafeGet("IncludeBranchNameInCommitMessage",true, ref _includebranchnameincommitmessage); }
+            set { SafeSet("IncludeBranchNameInCommitMessage", value, ref _includebranchnameincommitmessage); }
+        }
+
+        private static bool? _loadmyissues;
+        public static bool LoadMyIssues
+        {
+            get { return SafeGet("LoadMyIssues", true, ref _loadmyissues); }
+            set { SafeSet("LoadMyIssues", value, ref _loadmyissues); }
+        }
+
+
+        private static string _issueserviceurl;
+        public static string IssueServiceUrl
+        {
+            get { return SafeGet("IssueServiceUrl", @"https://jira.cfcausa.org/rpc/soap/jirasoapservice-v2?wsdl", ref _issueserviceurl); }
+            set { SafeSet("IssueServiceUrl", value, ref _issueserviceurl); }
+        }
+
+        private static string _issueserviceusername;
+        public static string IssueServiceUserName
+        {
+            get { return SafeGet("IssueServiceUserName", "jirareader", ref _issueserviceusername); }
+            set { SafeSet("IssueServiceUserName", value, ref _issueserviceusername); }
+        }
+
+        private static string _issueservicepassword;
+        public static string IssueServicePassword
+        {
+            get { return SafeGet("IssueServicePassword", ")3;a~a6}}FI", ref _issueservicepassword); }
+            set { SafeSet("IssueServicePassword", value, ref _issueservicepassword); }
+        }
+
+        private static bool? _showstatusopen;
+        public static bool ShowStatusOpen
+        {
+            get { return SafeGet("ShowStatusOpen", false, ref _showstatusopen); }
+            set { SafeSet("ShowStatusOpen", value, ref _showstatusopen); }
+        }
+
+        private static bool? _showstatusinprogress;
+        public static bool ShowStatusInProgress
+        {
+            get { return SafeGet("ShowStatusInProgress", true, ref _showstatusinprogress); }
+            set { SafeSet("ShowStatusInProgress", value, ref _showstatusinprogress); }
+        }
+
+        private static bool? _showstatusresolved;
+        public static bool ShowStatusResolved
+        {
+            get { return SafeGet("ShowStatusResolved", false, ref _showstatusresolved); }
+            set { SafeSet("ShowStatusResolved", value, ref _showstatusresolved); }
+        }
+
         private static int? _UserMenuLocationX;
         public static int UserMenuLocationX
         {
@@ -350,6 +408,29 @@ namespace GitCommands
             get { return GetBool("DonSetAsLastPullAction", true).Value; }
             set { SetBool("DonSetAsLastPullAction", value); }
         }
+
+
+        //private static string _issueconnectionurl;
+        //public static string IssueConnectionUrl
+        //{
+        //    get { return SafeGet("IssueConnectionUrl", "https://jira.cfcausa.org/rpc/soap/jirasoapservice-v2?wsdl", ref _issueconnectionurl); }
+        //    set { SafeSet("IssueConnectionUrl", value, ref _issueconnectionurl); }
+        //}
+
+        //private static string _issueconnectionusername;
+        //public static string IssueConnectionUserName
+        //{
+        //    get {return SafeGet("IssueConnectionUserName",Environment.UserDomainName,_issueconnectionusername);}
+        //    set {SafeSet("IssueConnectionUserName",value, ref _issueconnectionusername)};
+        //}
+
+        //private static string _issueconnectionpassword;
+        //public static string IssueConnectionPassword
+        //{
+        //    get {return SafeGet("IssueConnectionPassword",Environment.UserDomainName,_issueconnectionpassword);}
+        //    set {SafeSet("IssueConnectionPassword",value, ref _issueconnectionpassword)};
+        //}
+
 
         private static string _smtp;
         public static string Smtp
